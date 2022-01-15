@@ -16,3 +16,7 @@ How to Install
 - Download all files
 - Start the programm (it will Automaticly install the requirements)
 - Have fun if you have questions ask here: https://github.com/Deployd1/Astronomical-Grabber-Builder/issues
+
+Good to know
+-----------------------------------
+- We are developing on this tool all the time and we are trying our best to make your wishes come true!
