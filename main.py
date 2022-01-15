@@ -1,4 +1,3 @@
-from cmath import exp
 from os import system
 system("pip install -r requierments.txt")
 system("cls")
