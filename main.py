@@ -70,6 +70,8 @@ print(f'''{Style.BRIGHT}{Fore.GREEN}
 ▐         ▐     ▐   ▐   ▐   █    ▐   █    ▐    █    ▐   ▐     ▐                                                     
                             ▐        ▐         ▐                                                                     
 
+{Style.BRIGHT}{Fore.RED}Github: {Style.NORMAL}{Fore.WHITE}https://github.com/Deployd1/Astronomical-Grabber-Builder
+
 {Style.BRIGHT}{Fore.RED} 1 > {Style.NORMAL}{Fore.WHITE}Steals Tokens {Fore.GREEN}:: {Style.NORMAL}{Fore.WHITE}Yes
 {Style.BRIGHT}{Fore.RED} 2 > {Style.NORMAL}{Fore.WHITE}Gets Chrome Passwords {Fore.GREEN}:: {Style.NORMAL}{Fore.WHITE}Yes
 {Style.BRIGHT}{Fore.RED} 3 > {Style.NORMAL}{Fore.WHITE}Add own Code {Fore.GREEN}:: {Style.NORMAL}{Fore.WHITE}Yes
