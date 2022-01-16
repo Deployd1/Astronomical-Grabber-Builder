@@ -1,5 +1,7 @@
 from os import system
+import time
 system("pip install -r requierments.txt")
+time.sleep(2)
 system("cls")
 import os
 import time
